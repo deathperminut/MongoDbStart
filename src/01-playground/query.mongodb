@@ -1,0 +1,6 @@
+use("sample_training") // seleccionamos la base de datos
+
+// realizamos la consulta
+// zips es la colección que queremos ver
+db.zips.find({state:'NY'}).count()
+

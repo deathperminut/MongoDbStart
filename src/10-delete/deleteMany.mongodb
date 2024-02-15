@@ -1,0 +1,8 @@
+use("Platzi_store")
+
+
+// tambien podemos eliminar uno o varios
+
+db.products.deleteMany(
+  {price:100}
+  )

@@ -1,0 +1,14 @@
+use('sample_training')
+
+// unset sirve para eliminar el atributo
+
+db.zips.updateMany(
+  // query
+  { city:"CLEVELAND" },
+  // elements
+  { $unset: {
+    my_data: "" // este atributo no existe para pruebas mirar otro
+  }}
+)
+
+

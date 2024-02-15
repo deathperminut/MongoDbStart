@@ -1,0 +1,33 @@
+use("Platzi_store")
+
+// insertamos la primera lectura
+// db.iot.insertOne({
+//   sensor:'A001',
+//   date:'2022-01-03',
+//   reading:[1212]
+// })
+
+// insertamos una nueva lectura en el dia
+
+// db.iot.updateOne(
+//   // query
+//   {sensor: "A001",
+//    date:"2022-01-03"
+//   },
+//   {
+//     // eliminamos elemento por posición
+//     $pop:{
+//       readings:1
+//     }
+//   })
+
+db.iot.updateOne(
+  {
+    sensor:'A001',
+    date:'2022-01-03'
+  },
+  {
+    $push:{
+      reading:3012
+    }
+  })

@@ -1,0 +1,13 @@
+use('sample_training')
+
+
+db.zips.updateMany(
+  // query
+  { City: "CLEVELAND" },
+  // update data
+  // estamos cambiando el nombre del atributo
+  { $rename:{
+      City:"city"
+    }
+  }
+  )

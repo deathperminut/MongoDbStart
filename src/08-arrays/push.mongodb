@@ -1,0 +1,12 @@
+// AGREGAR ELEMENTOS EN LOS ARRAYS
+use("Platzi_store")
+
+db.inventory.updateOne(
+  // query
+  {_id:4},
+  // data
+  { $push:{
+      tags:"headphone"
+    }
+  }
+  )

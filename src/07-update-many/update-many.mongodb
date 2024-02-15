@@ -1,0 +1,15 @@
+// esta es con la base de datos de mongo atlas
+use('sample_training')
+
+db.zips.find({city:'CLEVELAND'}).count()
+
+db.zips.updateMany(
+  // query le digo que todos los que cumplan con city:"CLEVELAND"
+  { city:"CLEVELAND"},
+  // update - operators
+  {
+    $inc:{
+      pop:1000
+    }
+  }
+  )

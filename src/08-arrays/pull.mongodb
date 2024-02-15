@@ -1,0 +1,21 @@
+// para eliminar elementos de una lista que
+// corresponde a un atributo
+// AGREGAR ELEMENTOS EN LOS ARRAYS
+use("Platzi_store")
+
+// si el json esta vacio trae todos los documentos
+db.inventory.updateMany({},{
+  $pull:{
+    tags:"book"
+  }
+})
+
+// db.inventory.updateOne(
+//   // query
+//   {_id:4},
+//   // data
+//   { $pull:{
+//       tags:"headphone"
+//     }
+//   }
+//   )

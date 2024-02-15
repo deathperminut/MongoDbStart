@@ -1,0 +1,8 @@
+use('Platzi_store')
+
+db.products.updateOne(
+  {_id:2},
+  {$inc:{
+    price:300, // VALOR A INCREMENTAR
+  }}
+  )

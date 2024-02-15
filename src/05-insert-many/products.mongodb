@@ -1,0 +1,39 @@
+use('Platzi_store')
+
+// ELIMINA TODOS LOS DOCUMENTOS QUE SE NECESITEN
+db.products.drop()
+
+// insertamos varios
+
+db.products.insertMany([
+  {
+    _id:1,
+    name:"Product 1",
+    price:100
+  },
+  {
+    _id:2,
+    name:"Product 2",
+    price:200
+  },
+  {
+    _id:3,
+    name:"Product 3",
+    price:300
+  },{
+    _id:1,
+    name:"Product 4",
+    price:500
+  },
+  {
+    _id:4,
+    name:"Product 5",
+    price:100
+  }
+],{
+  ordered:false // si hay errores me los salta y me inserta lo que se puedan
+})
+// EN CASO DE LLAVES REPETIDAS INSERTA LAS QUE PUEDE HASTA QUE ENCUENTRA UNA LLAVE REPETIDA.
+// IMPORTANTE
+
+db.products.find()

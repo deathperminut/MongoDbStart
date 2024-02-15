@@ -1,0 +1,8 @@
+// NO NECESITAMOS CREAR UNA BASE DE DATOS
+// EXPLICITAMENTE EL YA SABE QUE SI NO EXISTE LA CREA
+use('Platzi_store')
+// OJO EL PLAYGROUND SE QUEDA CON EL OUTPUT DE LA ULTIMA INSTRUCCIÓN
+db.users.insertOne({
+  name:"Deathperminut",
+  password:"Carrito_1"
+})

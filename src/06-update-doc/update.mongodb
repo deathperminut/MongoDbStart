@@ -1,0 +1,15 @@
+use('Platzi_store')
+
+db.products.updateOne(
+  // query
+  {_id:4},
+  // change => operators
+  // me permiten definir que atributos
+  // quiero cambiar
+  {
+    $set:{
+      name: 'change name',
+      price:3000,
+      tags:['A','B','C']
+    }
+  });

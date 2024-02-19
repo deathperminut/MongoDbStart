@@ -1,0 +1,10 @@
+use("Platzi_store")
+
+
+db.inventory.find(
+  // QUERY
+  {}
+  // PROJECTION
+  ,
+  {"item.description":1,_id:0}
+  )

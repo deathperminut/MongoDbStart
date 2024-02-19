@@ -1,0 +1,7 @@
+// comparativa "diferente"
+
+use('Platzi_store')
+
+db.inventory.find({"item.name":{
+  $ne:"ab"
+}}).count()

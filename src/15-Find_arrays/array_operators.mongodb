@@ -1,0 +1,49 @@
+use("Platzi_store")
+
+
+// $in revisar elementos en un array objetos valores especificos y arrays
+
+//db.inventory.find({qty:{$in:[20,25]}})
+
+// ANTERIOR MENTE QTY NO ES UN ARRAY PERO PUEDO
+// USARLAR EN LOS ARRAYS
+
+//db.inventory.find({tags:{$in:["book","electronics"]}})
+// ESTE CASO ES PARA SABER SI ESTA UNO U OTRO NO AMBOS NECESARIAMENTE
+
+
+// $nin que no esten dentro de la lista
+
+// db.inventory.find({tags:{$nin:["book","electronics"]}})
+
+// ARRAYS
+// SI YO BUSCO EN UN ATRIBUTO QUE ES UN ARRAY UNA CADENA ESPECIFICA PUEDO SOLO
+// COLOCARLA
+
+
+//db.inventory.find({ tags: "book"})
+
+// PERO SI LO BUSCO UN ARRAY DIRECTAMENTE
+
+//db.inventory.find({tags:["book","school"]}) //  ME LO BUSCA LITERAL TENIENDO EN CUENTA LA POSICIÓN
+ // Y LA CANTIDAD DE ELEMENTOS
+
+
+ // OPERADORES PARA ARRAYS
+
+ // $all que tenga los elementos definidos
+//db.inventory.find({tags:{$all:["book","school"]}})
+
+// buscar por tamaño $size
+
+db.inventory.find({tags:{$size:2}})
+
+///////////////////////////
+// ARRAY CON OBJETOS DENTRO
+///////////////////////////
+
+db.survey.find( {results:{ $elemMatch:{product:"xyz",score:{$gte:7}}}})
+
+// ESTAMOS BUSCANDO TODOS LOS results [array] QUE TENGAN UN ELEMENTO  QUE TENGA COMO PRODUCTO
+// XYZ
+

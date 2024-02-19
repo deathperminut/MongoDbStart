@@ -1,0 +1,8 @@
+// VAMOS A MANEJAR LO QUE SERIA LOS OPERADORES LOGICOS
+// $gt (>) $gte (>=)
+// $lt (<) $lte (<=)
+use("Platzi_store")
+db.inventory.find({
+  "item.code":{$ne:"123"},
+  qty:{$gte:20,$lte:25}
+})

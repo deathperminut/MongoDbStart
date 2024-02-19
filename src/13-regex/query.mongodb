@@ -1,0 +1,24 @@
+use("Platzi_store")
+
+
+// me ayuda a buscar expresiones regulares
+// en cadenas de texto
+//db.inventory.find({"item.description":{$regex:/line/}})
+// SENSIBLE  A MAYUSCULAS
+//db.inventory.find({"item.description":{$regex:/LINE/}})
+//db.inventory.find({"item.description":{$regex:/line/i}})
+
+// COLOCANDO LA I AL FINAL DE LA EXPRESIÓN REGULAR DESABILITAMOS EL
+// SENSITIVE CASE
+
+// CON EL SIGNO $ SERIA PARA DEFINIR QUE ME TRAIGA TODOS LOS ELEMENTOS QUE TERMINEN CON LA LETRA QUE SELECCIONE
+
+//db.inventory.find({"item.description":{$regex:/line$/i}})
+
+// CON EL SIGNO ^ SERIA PARA FILTRAR AQUELLOS CARACTERES QUE INICIEN CON LA CADENA QUE DEFINIMOS
+
+//db.inventory.find({"item.description":{$regex:/^s/i}})
+
+// para las cadenas que tienen saltos de linea podemos tambien tenerlos en cuenta agregando un operador "m" al final
+
+db.inventory.find({"item.description":{$regex:/^s/im}})

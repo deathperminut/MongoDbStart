@@ -1,0 +1,11 @@
+
+// EN CASO DE QUE QUIERA HACER
+// QUERIES CON ELEMENTOS QUE
+// TIENEN OBJETOS INTRINSECOS
+
+use("Platzi_store")
+
+// en caso de acceder a un atributo
+// de un objeto tengo que especificar
+// en comillas
+db.inventory.find({"item.name":'ab'})
